@@ -59,8 +59,8 @@ Elaborar listado de requerimientos del contexto planteado. Donde cada requerimie
 | Salidas | Tasas guardadas en sistema, Mensaje de confirmación, Lista actualizada de tasas |
 
 
-### R-02 Simulación de operaciones
-| Nombre | R-02 Simulación de operaciones |
+### R-03 Simulación de operaciones
+| Nombre | R-03 Simulación de operaciones |
 |--------|-----------------------|
 | Descripción | Simular operaciones antes de confirmar, mostrando montos y tasas aplicadas. |
 | Entradas | Cliente (selección), Tipo de operación (Compra / Venta), Moneda de origen (Selección), Moneda de destino (Selección), Monto (númerico) |
