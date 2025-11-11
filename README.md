@@ -58,3 +58,10 @@ Elaborar listado de requerimientos del contexto planteado. Donde cada requerimie
 | Entradas | Moneda (selección: USD, EUR, COP), Tasa de compra (numérico), Tasa de venta (numérico), Fecha (texto) |
 | Salidas | Tasas guardadas en sistema, Mensaje de confirmación, Lista actualizada de tasas |
 
+
+### R-02 Simulación de operaciones
+| Nombre | R-02 Simulación de operaciones |
+|--------|-----------------------|
+| Descripción | Simular operaciones antes de confirmar, mostrando montos y tasas aplicadas. |
+| Entradas | Cliente (selección), Tipo de operación (Compra / Venta), Moneda de origen (Selección), Moneda de destino (Selección), Monto (númerico) |
+| Salidas | Detalle de simulación, Monto a recibir, Tasa aplicada |
