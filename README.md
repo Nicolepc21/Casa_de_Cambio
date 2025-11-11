@@ -36,9 +36,17 @@ Desarrollar un sistema de casa de cambio que permita gestionar clientes, tasas d
 
 **4. ¿Qué objetos se incluye?**
 
+Cliente
+
+TasaCambio
+
+Transaccion
+
+CasaCambioGUI
 
 **5. ¿Cómo lo genera y que objetos se requiere?**
 
+Se genera con un desarrollo orientado a objetos donde cada parte cumpla una tarea clara y se comuniquen entre sí. La ventana principal del programa (CasaCambioGUI) es la que dirige todo pues pide los datos del cliente, consulta las tasas de cambio disponibles y con esa información realiza y registra la operación de compra o venta de moneda. Así, cada componente hace su parte de forma ordenada, lo que permite que el sistema sea fácil de entender, usar y mantener.
 
 ## Fase 1:
 Elaborar listado de requerimientos del contexto planteado. Donde cada requerimiento se debe documentar haciendo uso de la siguiente tabla.
