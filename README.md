@@ -73,3 +73,19 @@ Elaborar listado de requerimientos del contexto planteado. Donde cada requerimie
 | Descripción | Simular operaciones antes de confirmar, mostrando montos y tasas aplicadas. |
 | Entradas | Cliente (selección), Tipo de operación (Compra / Venta), Moneda de origen (Selección), Moneda de destino (Selección), Monto (númerico) |
 | Salidas | Detalle de simulación, Monto a recibir, Tasa aplicada |
+
+
+### R-04 Ejecución de Transacciones 
+| Nombre | R-04 Ejecución de transacciones |
+|--------|-----------------------|
+| Descripción | Regitrar transacciones confirmadas por clientes. |
+| Entradas | Datos de simulacion confirmados|
+| Salidas |Transaccion registrada, Comprobante de operación, Actualizacion de historial |
+
+
+### R-05 Generación de Reportes 
+| Nombre | R-05 Generación de Reportes |
+|--------|-----------------------|
+| Descripción | Generar reportes de clientes, tasas y transacciones. |
+| Entradas |Solicitud de reporte  |
+| Salidas | Reporte completo del sistema, Listado de clientes, tasas y transacciones, Resumen financiero  |
