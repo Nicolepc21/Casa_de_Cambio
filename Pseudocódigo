@@ -19,7 +19,7 @@ INICIO DEL PROGRAMA
     - Seleccionar tipo de operación (COMPRA o VENTA)
     - Seleccionar moneda origen
     - Seleccionar moneda destino
-    - Ingresar el monto
+    - Ingresar el monto 
     - Botón para simular la operación
     - Botón para registrar la transacción
     - Botón para generar reporte
