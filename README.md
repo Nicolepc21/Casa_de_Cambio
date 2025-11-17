@@ -105,7 +105,7 @@ Elaborar listado de requerimientos del contexto planteado. Donde cada requerimie
 | Salidas | Reporte completo del sistema, Listado de clientes, tasas y transacciones, Resumen financiero  |
 
 **Pseudocódigo Casa de Cambio**
-'''pseudocodigo
+```pseudocodigo
 INICIO DEL PROGRAMA
   Mostrar ventana de bienvenida
   Pedir al usuario que ingrese su nombre
@@ -149,6 +149,6 @@ INICIO DEL PROGRAMA
           montoDestino = montoOrigen * tasaCompra
   Mostrar al usuario el resultado de la simulación
 -------------------------------------------------------
-'''
+```
 
 ## Fase 2:
