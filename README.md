@@ -104,5 +104,51 @@ Elaborar listado de requerimientos del contexto planteado. Donde cada requerimie
 | Entradas |Solicitud de reporte  |
 | Salidas | Reporte completo del sistema, Listado de clientes, tasas y transacciones, Resumen financiero  |
 
+**Pseudocódigo Casa de Cambio**
+'''pseudocodigo
+INICIO DEL PROGRAMA
+  Mostrar ventana de bienvenida
+  Pedir al usuario que ingrese su nombre
+  Si no ingresa nombre:
+    Mostrar mensaje de error
+    Pedir nuevamente
+  Guardar el nombre ingresado
+  Mostrar ventana de licencia
+  Si el usuario acepta:
+    Abrir ventana principal del sistema
+  Si no acepta:
+    Cerrar el programa
+-------------------------------------------------------
+  EN LA VENTANA PRINCIPAL:
+  Cargar lista de clientes
+  Cargar lista de tasas de cambio disponibles
+  Preparar interfaz con opciones
+    - Seleccionar cliente
+    - Seleccionar tipo de operación (COMPRA o VENTA)
+    - Seleccionar moneda origen
+    - Seleccionar moneda destino
+    - Ingresar el monto
+    - Botón para simular la operación
+    - Botón para registrar la transacción
+    - Botón para generar reporte
+    - Tabla para mostrar transacciones realizadas
+-------------------------------------------------------
+  CUANDO EL USUARIO SIMULA UNA OPERACIÓN:
+  Leer cliente seleccionado
+  Leer tipo de operación (COMPRA o VENTA)
+  Leer moneda origen
+  Leer moneda destino
+  Leer monto ingresado
+  Buscar la tasa de cambio correspondiente a la moneda seleccionada
+  Si no existe tasa:
+      Mostrar error
+  Si existe tasa:
+      Si la operación es COMPRA:
+          montoDestino = montoOrigen / tasaVenta
+      Si la operación es VENTA:
+          montoDestino = montoOrigen * tasaCompra
+  Mostrar al usuario el resultado de la simulación
+-------------------------------------------------------
+'''
 
 ## Fase 2:
