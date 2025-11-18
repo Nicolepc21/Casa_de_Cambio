@@ -152,3 +152,224 @@ INICIO DEL PROGRAMA
 ```
 
 ## Fase 2:
+Etapa de diseño que permite determinar cuáles son las clases que conformaran el sistema
+
+•	Elaborar lista de sustantivos del enunciado del proyecto para determinar cuáles son las clases del sistema.
+ 
+  •	Bienvenida (autenticación)
+ 
+  •	Principal (interfaz principal)
+ 
+  •	Cliente (gestión de clientes)
+ 
+  •	TasaCambio (tasas de divisas)
+ 
+  •	Transaccion (operaciones)
+
+•	Construir representación gráfica de las clases identificadas y asociar, las características a cada clase (atributos) y las operaciones que se van a realizar (métodos).
+
+<table>
+  <tr>
+    <th colspan="2" style="text-align:center;">Bienvenida</th>
+  </tr>
+  <tr>
+    <th>Atributos</th>
+    <td>
+      - texto: String (static)<br>
+      - txtUsuario: JTextField<br>
+      - btnIngresar: JButton
+    </td>
+  </tr>
+  <tr>
+    <th>Métodos</th>
+    <td>
+      + Bienvenida() (constructor)<br>
+      + configurarEventos(): void<br>
+      + main(String[] args): void
+    </td>
+  </tr>
+</table>
+---------------------------------------------------------------------------
+<table>
+  <tr>
+    <th colspan="2" style="text-align:center;">Principal</th>
+  </tr>
+
+  <tr>
+    <th>Atributos</th>
+    <td>
+      - clientes: ArrayList&lt;Cliente&gt;<br>
+      - tasas: ArrayList&lt;TasaCambio&gt;<br>
+      - transacciones: ArrayList&lt;Transaccion&gt;<br>
+      - tabbedPane: JTabbedPane
+    </td>
+  </tr>
+
+  <tr>
+    <th>Métodos</th>
+    <td>
+      + Principal() (constructor)<br>
+      + inicializarComponentes(): void<br>
+      + configurarInterfaz(): void<br>
+      + configurarEventos(): void<br>
+      + registrarCliente(): void<br>
+      + guardarTasas(): void<br>
+      + simularOperacion(): void<br>
+      + confirmarTransaccion(): void<br>
+      + generarReporte(): void<br>
+      + actualizarTipoOperacion(): void<br>
+      + actualizarComboClientes(): void
+    </td>
+  </tr>
+</table>
+---------------------------------------------------------------------------
+
+• Documentación atributos de la clase
+
+<table>
+  <tr>
+    <th>Nombre de la clase</th>
+    <th>Nombre del atributo</th>
+    <th>Nombre Codificación</th>
+    <th>Objetivo</th>
+  </tr>
+
+  <tr>
+    <td rowspan="3">Bienvenida</td>
+    <td>texto</td>
+    <td>String (static)</td>
+    <td>Almacena el nombre del usuario autenticado en el sistema</td>
+  </tr>
+
+  <tr>
+    <td>txtUsuario</td>
+    <td>JTextField</td>
+    <td>Campo de entrada para que el usuario ingrese su nombre</td>
+  </tr>
+
+  <tr>
+    <td>btnIngresar</td>
+    <td>JButton</td>
+    <td>Botón para validar y acceder al sistema principal</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------------------
+<table>
+  <tr>
+    <th>Nombre de la clase</th>
+    <th>Nombre del atributo</th>
+    <th>Nombre Codificación</th>
+    <th>Objetivo</th>
+  </tr>
+
+  <tr>
+    <td rowspan="19">Principal</td>
+    <td>clientes</td>
+    <td>ArrayList&lt;Cliente&gt;</td>
+    <td>Almacena la lista de todos los clientes registrados</td>
+  </tr>
+
+  <tr>
+    <td>tasas</td>
+    <td>ArrayList&lt;TasaCambio&gt;</td>
+    <td>Contiene todas las tasas de cambio configuradas</td>
+  </tr>
+
+  <tr>
+    <td>transacciones</td>
+    <td>ArrayList&lt;Transaccion&gt;</td>
+    <td>Registra el historial de todas las transacciones realizadas</td>
+  </tr>
+
+  <tr>
+    <td>tabbedPane</td>
+    <td>JTabbedPane</td>
+    <td>Contenedor principal con las 4 pestañas de funcionalidad</td>
+  </tr>
+
+  <tr>
+    <td>txtNombre</td>
+    <td>JTextField</td>
+    <td>Campo para ingresar el nombre del cliente</td>
+  </tr>
+
+  <tr>
+    <td>txtDocumento</td>
+    <td>JTextField</td>
+    <td>Campo para ingresar el documento del cliente</td>
+  </tr>
+
+  <tr>
+    <td>txtTelefono</td>
+    <td>JTextField</td>
+    <td>Campo para ingresar el teléfono del cliente</td>
+  </tr>
+
+  <tr>
+    <td>comboMoneda</td>
+    <td>JComboBox&lt;String&gt;</td>
+    <td>Selector de moneda para tasas (USD, EUR, COP)</td>
+  </tr>
+
+  <tr>
+    <td>txtCompra</td>
+    <td>JTextField</td>
+    <td>Campo para ingresar tasa de compra</td>
+  </tr>
+
+  <tr>
+    <td>txtVenta</td>
+    <td>JTextField</td>
+    <td>Campo para ingresar tasa de venta</td>
+  </tr>
+
+  <tr>
+    <td>comboClientes</td>
+    <td>JComboBox&lt;Cliente&gt;</td>
+    <td>Lista desplegable de clientes para operaciones</td>
+  </tr>
+
+  <tr>
+    <td>comboTipo</td>
+    <td>JComboBox&lt;String&gt;</td>
+    <td>Selector de tipo de operación (COMPRA/VENTA)</td>
+  </tr>
+
+  <tr>
+    <td>comboMonedaOrigen</td>
+    <td>JComboBox&lt;String&gt;</td>
+    <td>Selector de moneda de origen para operaciones</td>
+  </tr>
+
+  <tr>
+    <td>comboMonedaDestino</td>
+    <td>JComboBox&lt;String&gt;</td>
+    <td>Selector de moneda de destino para operaciones</td>
+  </tr>
+
+  <tr>
+    <td>txtMonto</td>
+    <td>JTextField</td>
+    <td>Campo para ingresar monto a cambiar</td>
+  </tr>
+
+  <tr>
+    <td>textAreaResultado</td>
+    <td>JTextArea</td>
+    <td>Área para mostrar resultados de simulación</td>
+  </tr>
+
+  <tr>
+    <td>textAreaTasas</td>
+    <td>JTextArea</td>
+    <td>Área para mostrar lista de tasas configuradas</td>
+  </tr>
+
+  <tr>
+    <td>textAreaReportes</td>
+    <td>JTextArea</td>
+    <td>Área para mostrar reportes generados</td>
+  </tr>
+
+</table>
+-----------------------------------------------------------------------------------------------------------------------------------------
