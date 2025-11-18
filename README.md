@@ -509,3 +509,77 @@ Etapa de diseño que permite determinar cuáles son las clases que conformaran e
   </tr>
 </table>
 ------------------------------------------------------------------------------------------------------
+<table>
+  <tr>
+    <th>Nombre de la clase</th>
+    <th>Nombre del atributo</th>
+    <th>Nombre Codificación</th>
+    <th>Objetivo</th>
+  </tr>
+
+  <tr>
+    <td rowspan="4">TasaCambio</td>
+    <td>moneda</td>
+    <td>String</td>
+    <td>Tipo de moneda (USD, EUR, COP)</td>
+  </tr>
+
+  <tr>
+    <td>TasaCompra</td>
+    <td>double</td>
+    <td>Valor de tasa para operaciones de COMPRA</td>
+  </tr>
+
+  <tr>
+    <td>TasaVenta</td>
+    <td>double</td>
+    <td>Valor de tasa para operaciones de VENTA</td>
+  </tr>
+
+  <tr>
+    <td>Fecha</td>
+    <td>String</td>
+    <td>Fecha de vigencia de la tasa</td>
+  </tr>
+</table>
+------------------------------------------------------------------------------------------------------
+<table>
+  <tr>
+    <th>Nombre de la clase</th>
+    <th>Nombre del atributo</th>
+    <th>Nombre Codificación</th>
+    <th>Objetivo</th>
+  </tr>
+
+  <tr>
+    <td rowspan="5">Transaccion</td>
+    <td>cliente</td>
+    <td>Cliente</td>
+    <td>Referencia al cliente que realiza la operación</td>
+  </tr>
+
+  <tr>
+    <td>tipo</td>
+    <td>String</td>
+    <td>Tipo de operación (COMPRA o VENTA)</td>
+  </tr>
+
+  <tr>
+    <td>montoOrigen</td>
+    <td>double</td>
+    <td>Monto original en la moneda de origen</td>
+  </tr>
+
+  <tr>
+    <td>montoDestino</td>
+    <td>double</td>
+    <td>Monto resultante en la moneda de destino</td>
+  </tr>
+
+  <tr>
+    <td>tasa</td>
+    <td>TasaCambio</td>
+    <td>Tasa de cambio utilizada en la operación</td>
+  </tr>
+</table>
+------------------------------------------------------------------------------------------------------
