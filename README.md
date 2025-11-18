@@ -248,107 +248,87 @@ Etapa de diseño que permite determinar cuáles son las clases que conformaran e
 ---------------------------------------------------------------------------
 <table>
   <tr>
-    <th>Clase</th>
-  </tr>
-  <tr>
-    <td><strong>Cliente</strong></td>
+    <th colspan="2" style="text-align:center;">Cliente</th>
   </tr>
 
   <tr>
     <th>Atributos</th>
-  </tr>
-  <tr>
     <td>
-      <strong>nombre</strong>: String<br>
-      <strong>documento</strong>: String<br>
-      <strong>telefono</strong>: String
+      - nombre: String<br>
+      - documento: String<br>
+      - telefono: String
     </td>
   </tr>
 
   <tr>
-    <th>Métodos / Constructor</th>
-  </tr>
-  <tr>
+    <th>Métodos</th>
     <td>
-      <strong>Cliente(String, String, String)</strong><br>
-      <strong>getNombre():</strong> String<br>
-      <strong>getDocumento():</strong> String<br>
-      <strong>getTelefono():</strong> String<br>
-      <strong>toString():</strong> String
+      + Cliente(String, String, String) (constructor)<br>
+      + getNombre(): String<br>
+      + getDocumento(): String<br>
+      + getTelefono(): String<br>
+      + toString(): String
     </td>
   </tr>
 </table>
---------------------------------------------------------------
+-----------------------------------------------------
 <table>
   <tr>
-    <th>Clase</th>
-  </tr>
-  <tr>
-    <td><strong>TasaCambio</strong></td>
+    <th colspan="2" style="text-align:center;">TasaCambio</th>
   </tr>
 
   <tr>
     <th>Atributos</th>
-  </tr>
-  <tr>
     <td>
-      <strong>moneda</strong>: String<br>
-      <strong>tasaCompra</strong>: double<br>
-      <strong>tasaVenta</strong>: double<br>
-      <strong>fecha</strong>: String
+      - moneda: String<br>
+      - tasaCompra: double<br>
+      - tasaVenta: double<br>
+      - fecha: String
     </td>
   </tr>
 
   <tr>
-    <th>Métodos / Constructor</th>
-  </tr>
-  <tr>
+    <th>Métodos</th>
     <td>
-      <strong>TasaCambio(String, double, double, String)</strong><br>
-      <strong>getMoneda():</strong> String<br>
-      <strong>getTasaCompra():</strong> double<br>
-      <strong>getTasaVenta():</strong> double<br>
-      <strong>getFecha():</strong> String<br>
-      <strong>toString():</strong> String
+      + TasaCambio(String, double, double, String) (constructor)<br>
+      + getMoneda(): String<br>
+      + getTasaCompra(): double<br>
+      + getTasaVenta(): double<br>
+      + getFecha(): String<br>
+      + toString(): String
     </td>
   </tr>
 </table>
------------------------------------------------------------------------------
+---------------------------------------------
 <table>
   <tr>
-    <th>Clase</th>
-  </tr>
-  <tr>
-    <td><strong>Transaccion</strong></td>
+    <th colspan="2" style="text-align:center;">Transaccion</th>
   </tr>
 
   <tr>
     <th>Atributos</th>
-  </tr>
-  <tr>
     <td>
-      <strong>cliente</strong>: Cliente<br>
-      <strong>tipo</strong>: String<br>
-      <strong>montoOrigen</strong>: double<br>
-      <strong>montoDestino</strong>: double<br>
-      <strong>tasa</strong>: TasaCambio
+      - cliente: Cliente<br>
+      - tipo: String<br>
+      - montoOrigen: double<br>
+      - montoDestino: double<br>
+      - tasa: TasaCambio
     </td>
   </tr>
 
   <tr>
-    <th>Métodos / Constructor</th>
-  </tr>
-  <tr>
+    <th>Métodos</th>
     <td>
-      <strong>Transaccion(Cliente, String, double, TasaCambio)</strong><br>
-      <strong>getCliente():</strong> Cliente<br>
-      <strong>getTipo():</strong> String<br>
-      <strong>getMontoOrigen():</strong> double<br>
-      <strong>getMontoDestino():</strong> double<br>
-      <strong>getTasa():</strong> TasaCambio
+      + Transaccion(Cliente, String, double, TasaCambio) (constructor)<br>
+      + getCliente(): Cliente<br>
+      + getTipo(): String<br>
+      + getMontoOrigen(): double<br>
+      + getMontoDestino(): double<br>
+      + getTasa(): TasaCambio
     </td>
   </tr>
 </table>
+
 ---------------------------------------------------
 
 • Documentación atributos de la clase
