@@ -246,37 +246,6 @@ Etapa de diseño que permite determinar cuáles son las clases que conformaran e
   </tr>
 </table>
 ---------------------------------------------------------------------------
-
-• Documentación atributos de la clase
-
-<table>
-  <tr>
-    <th>Nombre de la clase</th>
-    <th>Nombre del atributo</th>
-    <th>Nombre Codificación</th>
-    <th>Objetivo</th>
-  </tr>
-
-  <tr>
-    <td rowspan="3">Bienvenida</td>
-    <td>texto</td>
-    <td>String (static)</td>
-    <td>Almacena el nombre del usuario autenticado en el sistema</td>
-  </tr>
-
-  <tr>
-    <td>txtUsuario</td>
-    <td>JTextField</td>
-    <td>Campo de entrada para que el usuario ingrese su nombre</td>
-  </tr>
-
-  <tr>
-    <td>btnIngresar</td>
-    <td>JButton</td>
-    <td>Botón para validar y acceder al sistema principal</td>
-  </tr>
-</table>
------------------------------------------------------------------------------------------------------------------------------------------
 <table>
   <tr>
     <th>Nombre de la clase</th>
@@ -481,5 +450,37 @@ Etapa de diseño que permite determinar cuáles son las clases que conformaran e
     </tr>
   </tbody>
 </table>
------------------------------------------------------------------------------------------------------
 
+
+---------------------------------------------------
+
+• Documentación atributos de la clase
+
+<table>
+  <tr>
+    <th>Nombre de la clase</th>
+    <th>Nombre del atributo</th>
+    <th>Nombre Codificación</th>
+    <th>Objetivo</th>
+  </tr>
+
+  <tr>
+    <td rowspan="3">Bienvenida</td>
+    <td>texto</td>
+    <td>String (static)</td>
+    <td>Almacena el nombre del usuario autenticado en el sistema</td>
+  </tr>
+
+  <tr>
+    <td>txtUsuario</td>
+    <td>JTextField</td>
+    <td>Campo de entrada para que el usuario ingrese su nombre</td>
+  </tr>
+
+  <tr>
+    <td>btnIngresar</td>
+    <td>JButton</td>
+    <td>Botón para validar y acceder al sistema principal</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------------------
