@@ -481,3 +481,31 @@ Etapa de diseño que permite determinar cuáles son las clases que conformaran e
 
 </table>
 -----------------------------------------------------------------------------------------------------------------------------------------
+<table>
+  <tr>
+    <th>Nombre de la clase</th>
+    <th>Nombre del atributo</th>
+    <th>Nombre Codificación</th>
+    <th>Objetivo</th>
+  </tr>
+
+  <tr>
+    <td rowspan="3">Cliente</td>
+    <td>nombre</td>
+    <td>String</td>
+    <td>Almacena el nombre completo del cliente</td>
+  </tr>
+
+  <tr>
+    <td>documento</td>
+    <td>String</td>
+    <td>Almacena el número de documento de identidad</td>
+  </tr>
+
+  <tr>
+    <td>telefono</td>
+    <td>String</td>
+    <td>Almacena el número de teléfono de contacto</td>
+  </tr>
+</table>
+------------------------------------------------------------------------------------------------------
