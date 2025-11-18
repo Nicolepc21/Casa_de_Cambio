@@ -149,6 +149,30 @@ INICIO DEL PROGRAMA
           montoDestino = montoOrigen * tasaCompra
   Mostrar al usuario el resultado de la simulación
 -------------------------------------------------------
+ CUANDO EL USUARIO CONFIRMA LA OPERACIÓN:
+ Crear un objeto Transaccion con:
+     Cliente
+     Tipo
+     MontoOrigen
+     Tasa relacionada
+ Calcular el monto destino dentro de la transacción
+ Guardar la transaccion en la lista principal
+ Agregar la transaccion a la tabla visivle para el usuario
+ Mostrar mensaje de registro exitoso
+-------------------------------------------------------
+ CUANDO EL USUARIO GENERA REPORTE:
+  Crear un documento de texto interno con:
+      - Lista de clientes registrados
+      - Lista de tasas de cambio
+      - Lista de transacciones realizadas
+   Para cada sección:
+      Recorrer la lista correspondiente
+      Añadir datos al reporte
+      Mostrar el reporte final en pantalla
+-------------------------------------------------------
+ FIN DEL PROGRAMA CUANDO EL USUARIO CIERRA LA VENTANA 
+
+
 ```
 
 ## Fase 2:
