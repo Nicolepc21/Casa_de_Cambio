@@ -247,125 +247,6 @@ Etapa de diseño que permite determinar cuáles son las clases que conformaran e
 </table>
 ---------------------------------------------------------------------------
 <table>
-  <tr>
-    <th>Nombre de la clase</th>
-    <th>Nombre del atributo</th>
-    <th>Nombre Codificación</th>
-    <th>Objetivo</th>
-  </tr>
-
-  <tr>
-    <td rowspan="19">Principal</td>
-    <td>clientes</td>
-    <td>ArrayList&lt;Cliente&gt;</td>
-    <td>Almacena la lista de todos los clientes registrados</td>
-  </tr>
-
-  <tr>
-    <td>tasas</td>
-    <td>ArrayList&lt;TasaCambio&gt;</td>
-    <td>Contiene todas las tasas de cambio configuradas</td>
-  </tr>
-
-  <tr>
-    <td>transacciones</td>
-    <td>ArrayList&lt;Transaccion&gt;</td>
-    <td>Registra el historial de todas las transacciones realizadas</td>
-  </tr>
-
-  <tr>
-    <td>tabbedPane</td>
-    <td>JTabbedPane</td>
-    <td>Contenedor principal con las 4 pestañas de funcionalidad</td>
-  </tr>
-
-  <tr>
-    <td>txtNombre</td>
-    <td>JTextField</td>
-    <td>Campo para ingresar el nombre del cliente</td>
-  </tr>
-
-  <tr>
-    <td>txtDocumento</td>
-    <td>JTextField</td>
-    <td>Campo para ingresar el documento del cliente</td>
-  </tr>
-
-  <tr>
-    <td>txtTelefono</td>
-    <td>JTextField</td>
-    <td>Campo para ingresar el teléfono del cliente</td>
-  </tr>
-
-  <tr>
-    <td>comboMoneda</td>
-    <td>JComboBox&lt;String&gt;</td>
-    <td>Selector de moneda para tasas (USD, EUR, COP)</td>
-  </tr>
-
-  <tr>
-    <td>txtCompra</td>
-    <td>JTextField</td>
-    <td>Campo para ingresar tasa de compra</td>
-  </tr>
-
-  <tr>
-    <td>txtVenta</td>
-    <td>JTextField</td>
-    <td>Campo para ingresar tasa de venta</td>
-  </tr>
-
-  <tr>
-    <td>comboClientes</td>
-    <td>JComboBox&lt;Cliente&gt;</td>
-    <td>Lista desplegable de clientes para operaciones</td>
-  </tr>
-
-  <tr>
-    <td>comboTipo</td>
-    <td>JComboBox&lt;String&gt;</td>
-    <td>Selector de tipo de operación (COMPRA/VENTA)</td>
-  </tr>
-
-  <tr>
-    <td>comboMonedaOrigen</td>
-    <td>JComboBox&lt;String&gt;</td>
-    <td>Selector de moneda de origen para operaciones</td>
-  </tr>
-
-  <tr>
-    <td>comboMonedaDestino</td>
-    <td>JComboBox&lt;String&gt;</td>
-    <td>Selector de moneda de destino para operaciones</td>
-  </tr>
-
-  <tr>
-    <td>txtMonto</td>
-    <td>JTextField</td>
-    <td>Campo para ingresar monto a cambiar</td>
-  </tr>
-
-  <tr>
-    <td>textAreaResultado</td>
-    <td>JTextArea</td>
-    <td>Área para mostrar resultados de simulación</td>
-  </tr>
-
-  <tr>
-    <td>textAreaTasas</td>
-    <td>JTextArea</td>
-    <td>Área para mostrar lista de tasas configuradas</td>
-  </tr>
-
-  <tr>
-    <td>textAreaReportes</td>
-    <td>JTextArea</td>
-    <td>Área para mostrar reportes generados</td>
-  </tr>
-
-</table>
------------------------------------------------------------------------------------------------------------------------------------------
-<table>
   <thead>
     <tr>
       <th>Clase</th>
@@ -482,5 +363,125 @@ Etapa de diseño que permite determinar cuáles son las clases que conformaran e
     <td>JButton</td>
     <td>Botón para validar y acceder al sistema principal</td>
   </tr>
+</table>
+-------------------------------------------------------------------------------------
+
+<table>
+  <tr>
+    <th>Nombre de la clase</th>
+    <th>Nombre del atributo</th>
+    <th>Nombre Codificación</th>
+    <th>Objetivo</th>
+  </tr>
+
+  <tr>
+    <td rowspan="19">Principal</td>
+    <td>clientes</td>
+    <td>ArrayList&lt;Cliente&gt;</td>
+    <td>Almacena la lista de todos los clientes registrados</td>
+  </tr>
+
+  <tr>
+    <td>tasas</td>
+    <td>ArrayList&lt;TasaCambio&gt;</td>
+    <td>Contiene todas las tasas de cambio configuradas</td>
+  </tr>
+
+  <tr>
+    <td>transacciones</td>
+    <td>ArrayList&lt;Transaccion&gt;</td>
+    <td>Registra el historial de todas las transacciones realizadas</td>
+  </tr>
+
+  <tr>
+    <td>tabbedPane</td>
+    <td>JTabbedPane</td>
+    <td>Contenedor principal con las 4 pestañas de funcionalidad</td>
+  </tr>
+
+  <tr>
+    <td>txtNombre</td>
+    <td>JTextField</td>
+    <td>Campo para ingresar el nombre del cliente</td>
+  </tr>
+
+  <tr>
+    <td>txtDocumento</td>
+    <td>JTextField</td>
+    <td>Campo para ingresar el documento del cliente</td>
+  </tr>
+
+  <tr>
+    <td>txtTelefono</td>
+    <td>JTextField</td>
+    <td>Campo para ingresar el teléfono del cliente</td>
+  </tr>
+
+  <tr>
+    <td>comboMoneda</td>
+    <td>JComboBox&lt;String&gt;</td>
+    <td>Selector de moneda para tasas (USD, EUR, COP)</td>
+  </tr>
+
+  <tr>
+    <td>txtCompra</td>
+    <td>JTextField</td>
+    <td>Campo para ingresar tasa de compra</td>
+  </tr>
+
+  <tr>
+    <td>txtVenta</td>
+    <td>JTextField</td>
+    <td>Campo para ingresar tasa de venta</td>
+  </tr>
+
+  <tr>
+    <td>comboClientes</td>
+    <td>JComboBox&lt;Cliente&gt;</td>
+    <td>Lista desplegable de clientes para operaciones</td>
+  </tr>
+
+  <tr>
+    <td>comboTipo</td>
+    <td>JComboBox&lt;String&gt;</td>
+    <td>Selector de tipo de operación (COMPRA/VENTA)</td>
+  </tr>
+
+  <tr>
+    <td>comboMonedaOrigen</td>
+    <td>JComboBox&lt;String&gt;</td>
+    <td>Selector de moneda de origen para operaciones</td>
+  </tr>
+
+  <tr>
+    <td>comboMonedaDestino</td>
+    <td>JComboBox&lt;String&gt;</td>
+    <td>Selector de moneda de destino para operaciones</td>
+  </tr>
+
+  <tr>
+    <td>txtMonto</td>
+    <td>JTextField</td>
+    <td>Campo para ingresar monto a cambiar</td>
+  </tr>
+
+  <tr>
+    <td>textAreaResultado</td>
+    <td>JTextArea</td>
+    <td>Área para mostrar resultados de simulación</td>
+  </tr>
+
+  <tr>
+    <td>textAreaTasas</td>
+    <td>JTextArea</td>
+    <td>Área para mostrar lista de tasas configuradas</td>
+  </tr>
+
+  <tr>
+    <td>textAreaReportes</td>
+    <td>JTextArea</td>
+    <td>Área para mostrar reportes generados</td>
+  </tr>
+
 </table>
 -----------------------------------------------------------------------------------------------------------------------------------------
