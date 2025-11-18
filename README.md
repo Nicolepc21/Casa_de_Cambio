@@ -525,19 +525,19 @@ Etapa de diseño que permite determinar cuáles son las clases que conformaran e
   </tr>
 
   <tr>
-    <td>TasaCompra</td>
+    <td>tasaCompra</td>
     <td>double</td>
     <td>Valor de tasa para operaciones de COMPRA</td>
   </tr>
 
   <tr>
-    <td>TasaVenta</td>
+    <td>tasaVenta</td>
     <td>double</td>
     <td>Valor de tasa para operaciones de VENTA</td>
   </tr>
 
   <tr>
-    <td>Fecha</td>
+    <td>fecha</td>
     <td>String</td>
     <td>Fecha de vigencia de la tasa</td>
   </tr>
