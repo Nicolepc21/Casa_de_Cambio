@@ -396,3 +396,90 @@ Etapa de diseño que permite determinar cuáles son las clases que conformaran e
 
 </table>
 -----------------------------------------------------------------------------------------------------------------------------------------
+<table>
+  <thead>
+    <tr>
+      <th>Clase</th>
+      <th>Atributos</th>
+      <th>Constructores / Métodos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cliente</td>
+      <td>
+        <strong>nombre</strong>: String<br>
+        <strong>documento</strong>: String<br>
+        <strong>telefono</strong>: String
+      </td>
+      <td>
+        <strong>Cliente(String, String, String)</strong> — constructor<br>
+        <strong>getNombre():</strong> String<br>
+        <strong>getDocumento():</strong> String<br>
+        <strong>getTelefono():</strong> String<br>
+        <strong>toString():</strong> String
+      </td>
+    </tr>
+  </tbody>
+</table>
+-------------------------------------------------------------------------------------------------------
+<table>
+  <thead>
+    <tr>
+      <th>Clase</th>
+      <th>Atributos</th>
+      <th>Constructores / Métodos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TasaCambio</td>
+      <td>
+        <strong>moneda</strong>: String<br>
+        <strong>tasaCompra</strong>: double<br>
+        <strong>tasaVenta</strong>: double<br>
+        <strong>fecha</strong>: String
+      </td>
+      <td>
+        <strong>TasaCambio(String, double, double, String)</strong> — constructor<br>
+        <strong>getMoneda():</strong> String<br>
+        <strong>getTasaCompra():</strong> double<br>
+        <strong>getTasaVenta():</strong> double<br>
+        <strong>getFecha():</strong> String<br>
+        <strong>toString():</strong> String
+      </td>
+    </tr>
+  </tbody>
+</table>
+----------------------------------------------------------------------------------------------------
+<table>
+  <thead>
+    <tr>
+      <th>Clase</th>
+      <th>Atributos</th>
+      <th>Constructores / Métodos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Transaccion</td>
+      <td>
+        <strong>cliente</strong>: Cliente<br>
+        <strong>tipo</strong>: String<br>
+        <strong>montoOrigen</strong>: double<br>
+        <strong>montoDestino</strong>: double<br>
+        <strong>tasa</strong>: TasaCambio
+      </td>
+      <td>
+        <strong>Transaccion(Cliente, String, double, TasaCambio)</strong> — constructor<br>
+        <strong>getCliente():</strong> Cliente<br>
+        <strong>getTipo():</strong> String<br>
+        <strong>getMontoOrigen():</strong> double<br>
+        <strong>getMontoDestino():</strong> double<br>
+        <strong>getTasa():</strong> TasaCambio
+      </td>
+    </tr>
+  </tbody>
+</table>
+-----------------------------------------------------------------------------------------------------
+
