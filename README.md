@@ -176,7 +176,7 @@ FIN DEL PROGRAMA CUANDO EL USUARIO CIERRA LA VENTANA
 
 **Diagarama de flujo**
 
-[Diagrama de flujo.docx](https://github.com/user-attachments/files/23614652/Diagrama.de.flujo.docx)
+![Image](https://github.com/user-attachments/assets/b50e8c81-12c8-4e5a-aeea-2cdf4dedf05b)
 
 ## Fase 2:
 Etapa de diseño que permite determinar cuáles son las clases que conformaran el sistema
