@@ -1,4 +1,4 @@
-<img width="983" height="740" alt="image" src="https://github.com/user-attachments/assets/031bb675-36e0-44eb-9357-66fcfe0999be" /># Casa de Cambio
+#Casa de cambio
 
 ## Autores
 Lina Mariana Álvarez Góngora
