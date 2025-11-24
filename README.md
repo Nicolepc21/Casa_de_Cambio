@@ -12,7 +12,7 @@ Contextualización del enunciado del proyecto en donde se identifica:
 
 **1. ¿Qué debemos hacer?**
 
-Desarrollar un sistema de casa de cambio que permita gestionar clientes, tasas de cambio, operaciones financieras y generar reportes para cumplimiento normativo.
+Desarrollar un sistema de casa de cambio que permita gestionar clientes, operaciones financieras con tasas manuales y generar reportes para cumplimiento normativo.
 
 **2. ¿Qué se necesita?**
 
@@ -20,9 +20,7 @@ Desarrollar un sistema de casa de cambio que permita gestionar clientes, tasas d
 
 •	Sistema de registro y validación de clientes
 
-•	Gestión dinámica de tasas de cambio
-
-•	Simulación y ejecución de operaciones de compra/venta
+•	Simulación y ejecución de operaciones de compra/venta con tasas manuales
 
 •	Control de transacciones y reportes
 
@@ -30,9 +28,11 @@ Desarrollar un sistema de casa de cambio que permita gestionar clientes, tasas d
 
 •	Bienvenida
 
+•	Licencia
+
 •	Cliente
 
-•	TasaCambio
+•	Tasas manuales por operación 
 
 •	Transaccion
 
@@ -40,15 +40,15 @@ Desarrollar un sistema de casa de cambio que permita gestionar clientes, tasas d
 
 **4. ¿Qué objetos se incluye?**
 
-• Bienvenida - Maneja el login de usuarios
+• Bienvenida
 
-• Cliente - Gestiona información de clientes
+• Licencia
 
-• TasaCambio - Administra tasas de compra/venta
+• Principal
 
-• Transaccion - Controla operaciones realizadas
+• Cliente
 
-• Principal - Interfaz principal con 4 pestañas
+• Transaccion
 
 **5. ¿Cómo lo genera y que objetos se requiere?**
 
@@ -74,18 +74,18 @@ Elaborar listado de requerimientos del contexto planteado. Donde cada requerimie
 
 
 ### R-03 Gestión de tasa
-| Nombre | R-03 Gestión de tasa |
+| Nombre | R-03 Operaciones con Tasas Manuales |
 |--------|-----------------------|
-| Descripción | Configurar y actualizar tasas de compra/venta por moneda |
-| Entradas | Moneda (selección: USD, EUR, COP), Tasa de compra (numérico), Tasa de venta (numérico), Fecha (texto) |
-| Salidas | Tasas guardadas en sistema, Mensaje de confirmación, Lista actualizada de tasas |
+| Descripción | Permite ingresar tasa manual por operación para simulaciones de compra/venta |
+| Entradas | Moneda Origen (selección: USD, EUR, COP), Moneda Destino (selección: USD, EUR, COP), Tasa manual (numérico), Monto (numérico) |
+| Salidas | Cálculo de conversión, Detalle de simulación, Tasa aplicada en operación |
 
 
 ### R-04 Simulación de operaciones
 | Nombre | R-04 Simulación de operaciones |
 |--------|-----------------------|
-| Descripción | Simular operaciones antes de confirmar, mostrando montos y tasas aplicadas. |
-| Entradas | Cliente (selección), Tipo de operación (Compra / Venta), Moneda de origen (Selección), Moneda de destino (Selección), Monto (númerico) |
+| Descripción | Simular operaciones antes de confirmar, mostrando montos, tasas aplicadas y resultado |
+| Entradas | Cliente (selección), Tipo de operación (Compra / Venta), Moneda de origen (Selección), Moneda de destino (Selección), Monto (númerico), Tasa manual (numérico) |
 | Salidas | Detalle de simulación, Monto a recibir, Tasa aplicada |
 
 
@@ -94,7 +94,7 @@ Elaborar listado de requerimientos del contexto planteado. Donde cada requerimie
 |--------|-----------------------|
 | Descripción | Regitrar transacciones confirmadas por clientes. |
 | Entradas | Datos de simulacion confirmados|
-| Salidas |Transaccion registrada, Comprobante de operación, Actualizacion de historial |
+| Salidas |Transaccion registrada, Comprobante de operación, Actualizacion de reportes |
 
 
 ### R-06 Generación de Reportes 
@@ -104,79 +104,103 @@ Elaborar listado de requerimientos del contexto planteado. Donde cada requerimie
 | Entradas |Solicitud de reporte  |
 | Salidas | Reporte completo del sistema, Listado de clientes, tasas y transacciones, Resumen financiero  |
 
+
+### R-07 Gestión de Usuarios y Licencia 
+| Nombre | R-07 Gestión de Usuarios y Licencia |
+|--------|-----------------------|
+| Descripción | Flujo de autenticación y aceptación de términos antes de acceder al sistema principal |
+| Entradas | Nombre de usuario (texto),   |
+| Salidas | Acceso al sistema principal, Personalización con nombre de usuario |
+
+
 **Pseudocódigo Casa de Cambio**
 ```pseudocodigo
-INICIO DEL PROGRAMA
-  Mostrar ventana de bienvenida
-  Pedir al usuario que ingrese su nombre
-  Si no ingresa nombre:
-    Mostrar mensaje de error
-    Pedir nuevamente
-  Guardar el nombre ingresado
-  Mostrar ventana de licencia
-  Si el usuario acepta:
-    Abrir ventana principal del sistema
-  Si no acepta:
-    Cerrar el programa
+
+INICIO PROGRAMA
+  // MÓDULO BIENVENIDA
+  MOSTRAR ventana_bienvenida
+  SOLICITAR nombre_usuario
+  SI nombre_vacío ENTONCES mostrar_error
+  nombre_capitalizado = CAPITALIZAR(nombre_usuario)
+  GUARDAR nombre_global
+  
+  // MÓDULO LICENCIA
+  MOSTRAR términos_condiciones
+  SOLICITAR aceptación
+  SI acepta ENTONCES ir_a_principal
+  SINO volver_a_bienvenida
+
 -------------------------------------------------------
-  EN LA VENTANA PRINCIPAL:
-  Cargar lista de clientes
-  Cargar lista de tasas de cambio disponibles
-  Preparar interfaz con opciones
-    - Seleccionar cliente
-    - Seleccionar tipo de operación (COMPRA o VENTA)
-    - Seleccionar moneda origen
-    - Seleccionar moneda destino
-    - Ingresar el monto
-    - Botón para simular la operación
-    - Botón para registrar la transacción
-    - Botón para generar reporte
-    - Tabla para mostrar transacciones realizadas
+// MÓDULO PRINCIPAL
+CREAR pestañas: [Registro, Operaciones, Reportes]
+
+// INICIALIZAR DATOS
+clientes = []
+transacciones = []
+
+// PESTAÑA REGISTRO CLIENTE
+AL REGISTRAR_CLIENTE:
+  LEER nombre, documento, teléfono
+  VALIDAR: campos_obligatorios, numérico(documento), numérico(teléfono), documento_único
+  SI válido ENTONCES
+    cliente_nuevo = Cliente(nombre, documento, teléfono)
+    AGREGAR cliente_nuevo A clientes
+    MOSTRAR confirmación
+    ACTUALIZAR lista_clientes
+
 -------------------------------------------------------
-  CUANDO EL USUARIO SIMULA UNA OPERACIÓN:
-  Leer cliente seleccionado
-  Leer tipo de operación (COMPRA o VENTA)
-  Leer moneda origen
-  Leer moneda destino
-  Leer monto ingresado
-  Buscar la tasa de cambio correspondiente a la moneda seleccionada
-  Si no existe tasa:
-      Mostrar error
-  Si existe tasa:
-      Si la operación es COMPRA:
-          montoDestino = montoOrigen / tasaVenta
-      Si la operación es VENTA:
-          montoDestino = montoOrigen * tasaCompra
-  Mostrar al usuario el resultado de la simulación
+// PESTAÑA OPERACIONES
+AL SIMULAR_OPERACIÓN:
+  LEER cliente, tipo_operación, moneda_origen, moneda_destino, monto, tasa_manual
+  VALIDAR: clientes_existen, tasa>0, monto>0, monedas_diferentes
+  SI válido ENTONCES
+    monto_destino = CALCULAR_CONVERSIÓN(moneda_origen, moneda_destino, monto, tasa)
+    MOSTRAR simulación: cliente, tipo, monedas, montos, tasa
+
+AL CONFIRMAR_OPERACIÓN:
+  transacción = Transacción(cliente, tipo, monto, monto_destino, monedas, tasa)
+  AGREGAR transacción A transacciones
+  MOSTRAR comprobante
+  LIMPIAR campos
+
+FUNCIÓN CALCULAR_CONVERSIÓN(origen, destino, monto, tasa):
+  SI (origen=EUR Y destino=USD) O (destino=COP) ENTONCES
+    RETORNAR monto * tasa
+  SINO SI (origen=USD Y destino=EUR) O (origen=COP) ENTONCES
+    RETORNAR monto / tasa
+  SINO
+    RETORNAR monto * tasa
+  FIN SI
+
 -------------------------------------------------------
-CUANDO EL USUARIO CONFIRMA LA OPERACIÓN:
-Crear un objeto Transacción con:
-     Cliente
-     Tipo
-     MontoOrigen
-     Tasa
-Calcular el monto destino dentro de la transacción
-Guardar la transacción en la lista principal
-Agregar la transacción a la tabla visible para el usuario
-Mostrar mensaje de registro exitoso
+// PESTAÑA REPORTES
+AL GENERAR_REPORTE:
+  reporte = "REPORTE CASA DE CAMBIO\n"
+  reporte += "Clientes: " + clientes.tamaño + "\n"
+  PARA CADA cliente EN clientes:
+    reporte += cliente.nombre + " - " + cliente.documento + "\n"
+  
+  reporte += "\nTransacciones: " + transacciones.tamaño + "\n"
+  total = 0
+  PARA CADA transacción EN transacciones:
+    reporte += transacción.detalle + "\n"
+    total += transacción.monto_origen
+  
+  reporte += "TOTAL: $" + total
+  MOSTRAR reporte
+
 -------------------------------------------------------
-CUANDO EL USUARIO GENERA INFORME:
-  Crear un documento de texto interno con:
-      - Lista de clientes registrados
-      - Lista de que de cambio
-      - Lista de transacciones realizadas
-   Para cada sección:
-      Recorrer la lista correspondiente
-      Añadir datos al reporte
-      Mostrar el informe final en pantalla
--------------------------------------------------------
-FIN DEL PROGRAMA CUANDO EL USUARIO CIERRA LA VENTANA
+// FUNCIONES AUXILIARES
+CAPITALIZAR(nombre): convertir primera letra de cada palabra a mayúscula
+ES_NUMÉRICO(texto): verificar si es convertible a número
+
+FIN PROGRAMA
 
 ```
 
 **Diagarama de flujo**
 
-![Image](https://github.com/user-attachments/assets/b50e8c81-12c8-4e5a-aeea-2cdf4dedf05b)
+![WhatsApp Image 2025-11-21 at 6 35 05 PM](https://github.com/user-attachments/assets/9561ea5f-83b7-4be0-92ff-db61d91d0058)
 
 ## Fase 2:
 Etapa de diseño que permite determinar cuáles son las clases que conformaran el sistema
