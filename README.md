@@ -831,7 +831,8 @@ public class Transaccion {
 ```
 
 •	Construcción de los métodos que realizan las operaciones de las clases
-  o	Asignado el nombre del método, tipo de retorno de dato, lista de parámetros
+
+•	Asignado el nombre del método, tipo de retorno de dato, lista de parámetros
 
 ### Clase Bienvenida
 <table border="1" cellspacing="0" cellpadding="6">
