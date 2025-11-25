@@ -830,7 +830,8 @@ public class Transaccion {
 }
 ```
 
-•	Codificación de los atributos teniendo en cuenta el tipo y la visibilidad
+•	Construcción de los métodos que realizan las operaciones de las clases
+  o	Asignado el nombre del método, tipo de retorno de dato, lista de parámetros
 
 ### Clase Bienvenida
 <table border="1" cellspacing="0" cellpadding="6">
@@ -1054,6 +1055,390 @@ public class Transaccion {
   <tr>
     <th>Firma del Método</th>
     <td>private void configurarEventos()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+### Clase Principal
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>Principal</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Void (constructor)</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Inicializa el sistema principal, datos y interfaz completa</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>public Principal()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>inicializarComponentes</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Void</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Crea todas las instancias de componentes Swing</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>private void inicializarComponentes()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>configurarInterfaz</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Void</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Diseña el layout principal y organiza componentes</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>private void configurarInterfaz()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>configurarEventos</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Void</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Asigna listeners a botones y componentes interactivos</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>private void configurarEventos()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>crearPanelRegistroCliente</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>JPanel</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Construye y retorna el panel de registro de clientes</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>private JPanel crearPanelRegistroCliente()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>crearPanelReportes</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>JPanel</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Construye y retorna el panel de generación de reportes</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>private JPanel crearPanelReportes()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>actualizarTipoOperacion</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>void</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Actualiza automáticamente el tipo de operación según monedas</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>private void actualizarTipoOperacion()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>esNumerico</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>texto: String</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>boolean</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Valida si un string puede ser convertido a número</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>private boolean esNumerico(String texto)</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>actualizarComboClientes</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Void</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Sincroniza el combobox de clientes con la lista actual</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>private void actualizarComboClientes()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+ <table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>registrarCliente</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Void</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Procesa el registro de un nuevo cliente con validaciones</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>private void registrarCliente()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+  <table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>simularOperacion</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Void</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Calcula y muestra la simulación de una operación de cambio</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>private void simularOperacion()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+ <table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>confirmarTransaccion</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Void</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Registra una transacción confirmada en el historial del sistema</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>private void confirmarTransaccion()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>generarReporte</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Void</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Genera y muestra un reporte consolidado del sistema</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>private void generarReporte()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>mostrarMensajeBienvenida</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td></tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Void</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Muestra mensaje de bienvenida con guía de uso al usuario</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>private void mostrarMensajeBienvenida()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>cerrarSesion</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Void</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Gestiona el cierre de sesión y retorno a ventana de bienvenida</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>private void cerrarSesion()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>main</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>args: String[]</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Void</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Punto de entrada alternativo para pruebas del sistema principal</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>public static void main(String[] args)</td>
   </tr>
 </table>
 -----------------------------------------------------------------------------------------------------------------------------
