@@ -681,6 +681,154 @@ public class Licencia extends JFrame {
     private void configurarEventos() { ... }            // private - manejo eventos
 }
 ```
+### Clase Principal
+```Principal
+public class Principal extends JFrame {
+    // ATRIBUTOS DE DATOS - VISIBILIDAD PRIVATE
+    private ArrayList<Cliente> clientes;                // private - lista clientes
+    private ArrayList<Transaccion> transacciones;       // private - historial transacciones
+    
+    // ATRIBUTOS DE INTERFAZ - PESTAÑA REGISTRO
+    private JTextField txtNombre;                       // private - campo nombre cliente
+    private JTextField txtDocumento;                    // private - campo documento
+    private JTextField txtTelefono;                     // private - campo teléfono
+    private JButton btnRegistrarCliente;                // private - botón registrar
+    
+    // ATRIBUTOS DE INTERFAZ - PESTAÑA OPERACIONES
+    private JComboBox<Cliente> comboClientes;           // private - selector clientes
+    private JComboBox<String> comboTipo;                // private - tipo operación
+    private JComboBox<String> comboMonedaOrigen;        // private - moneda origen
+    private JComboBox<String> comboMonedaDestino;       // private - moneda destino
+    private JTextField txtMonto;                        // private - campo monto
+    private JTextField txtTasa;                         // private - campo tasa manual
+    private JTextArea textAreaResultado;                // private - área resultados
+    private JButton btnSimular;                         // private - botón simular
+    private JButton btnConfirmar;                       // private - botón confirmar
+    
+    // ATRIBUTOS DE INTERFAZ - PESTAÑA REPORTES
+    private JTextArea textAreaReportes;                 // private - área reportes
+    private JButton btnGenerarReporte;                  // private - botón generar reporte
+    
+    // ATRIBUTOS DE CONTENEDORES
+    private JTabbedPane tabbedPane;                     // private - pestañas principales
+    private JLabel lblUsuario;                          // private - etiqueta usuario
+    private JButton btnSalir;                           // private - botón salir
+    
+    // MÉTODOS PRINCIPALES
+    public Principal() {                                // public - constructor
+        inicializarComponentes();
+        configurarInterfaz();
+        configurarEventos();
+        mostrarMensajeBienvenida();
+    }
+    
+    private void inicializarComponentes() { ... }       // private - creación componentes
+    private void configurarInterfaz() { ... }           // private - diseño layout
+    private void configurarEventos() { ... }            // private - manejo eventos
+    
+    // MÉTODOS DE PANELES
+    private JPanel crearPanelRegistroCliente() { ... }  // private - panel registro
+    private JPanel crearPanelOperaciones() { ... }      // private - panel operaciones
+    private JPanel crearPanelReportes() { ... }         // private - panel reportes
+    
+    // MÉTODOS DE LÓGICA DE NEGOCIO
+    private void actualizarTipoOperacion() { ... }      // private - actualizar tipo auto
+    private boolean esNumerico(String texto) { ... }    // private - validación numérica
+    private void actualizarComboClientes() { ... }      // private - actualizar combo
+    private String capitalizarNombreCompleto(String nombre) { ... } // private - formato nombre
+    private void registrarCliente() { ... }             // private - registro cliente
+    private void simularOperacion() { ... }             // private - simulación operación
+    private void confirmarTransaccion() { ... }         // private - confirmar transacción
+    private void generarReporte() { ... }               // private - generar reporte
+    private void mostrarMensajeBienvenida() { ... }     // private - mensaje bienvenida
+    private void cerrarSesion() { ... }                 // private - cerrar sesión
+    
+    public static void main(String[] args) { ... }      // public static - punto entrada
+}
+```
+### Clase Cliente
+``` Cliente
+public class Cliente {
+    // ATRIBUTOS - ENCAPSULAMIENTO PRIVATE
+    private String nombre;                              // private - nombre cliente
+    private String documento;                           // private - documento identidad
+    private String telefono;                            // private - teléfono contacto
+    
+    // CONSTRUCTOR
+    public Cliente(String nombre, String documento, String telefono) { // public
+        this.nombre = nombre;
+        this.documento = documento;
+        this.telefono = telefono;
+    }
+    
+    // MÉTODOS ACCESORES (GETTERS) - PUBLIC
+    public String getNombre() { return nombre; }        // public - obtener nombre
+    public String getDocumento() { return documento; }  // public - obtener documento
+    public String getTelefono() { return telefono; }    // public - obtener teléfono
+    
+    // MÉTODOS MUTADORES (SETTERS) - PUBLIC
+    public void setNombre(String nombre) {              // public - modificar nombre
+        this.nombre = nombre;
+    }
+    public void setDocumento(String documento) {        // public - modificar documento
+        this.documento = documento;
+    }
+    public void setTelefono(String telefono) {          // public - modificar teléfono
+        this.telefono = telefono;
+    }
+    
+    // MÉTODO TO STRING - PUBLIC
+    @Override
+    public String toString() {                          // public - representación textual
+        return nombre + " (" + documento + ")";
+    }
+}
+```
+### Clase Transaccion
+``` Transaccion
+public class Transaccion {
+    // ATRIBUTOS - ENCAPSULAMIENTO PRIVATE
+    private Cliente cliente;                            // private - cliente operación
+    private String tipo;                                // private - tipo (COMPRA/VENTA)
+    private double montoOrigen;                         // private - monto moneda origen
+    private double montoDestino;                        // private - monto moneda destino
+    private double tasaAplicada;                        // private - tasa manual aplicada
+    private String monedaOrigen;                        // private - código moneda origen
+    private String monedaDestino;                       // private - código moneda destino
+    private String fecha;                               // private - fecha transacción
+    
+    // CONSTRUCTOR
+    public Transaccion(Cliente cliente, String tipo, double montoOrigen, 
+                      double montoDestino, String monedaOrigen, 
+                      String monedaDestino, double tasaAplicada) { // public
+        this.cliente = cliente;
+        this.tipo = tipo;
+        this.montoOrigen = montoOrigen;
+        this.montoDestino = montoDestino;
+        this.tasaAplicada = tasaAplicada;
+        this.monedaOrigen = monedaOrigen;
+        this.monedaDestino = monedaDestino;
+        this.fecha = java.time.LocalDate.now().toString(); // fecha automática
+    }
+    
+    // MÉTODOS ACCESORES (GETTERS) - PUBLIC
+    public Cliente getCliente() { return cliente; }     // public - obtener cliente
+    public String getTipo() { return tipo; }            // public - obtener tipo
+    public double getMontoOrigen() { return montoOrigen; } // public - obtener monto origen
+    public double getMontoDestino() { return montoDestino; } // public - obtener monto destino
+    public double getTasaAplicada() { return tasaAplicada; } // public - obtener tasa
+    public String getMonedaOrigen() { return monedaOrigen; } // public - obtener moneda origen
+    public String getMonedaDestino() { return monedaDestino; } // public - obtener moneda destino
+    public String getFecha() { return fecha; }          // public - obtener fecha
+    
+    // MÉTODO TO STRING - PUBLIC
+    @Override
+    public String toString() {                          // public - representación textual
+        return tipo + " - " + cliente.getNombre() + " - $" + montoOrigen + " " + monedaOrigen + 
+               " -> $" + montoDestino + " " + monedaDestino + " (Tasa: " + tasaAplicada + ")";
+    }
+}
+```
 
 •	Codificación de los atributos teniendo en cuenta el tipo y la visibilidad
 
