@@ -1418,6 +1418,201 @@ public class Transaccion {
     <td>private void cerrarSesion()</td>
   </tr>
 </table>
+--------------------------------------------------------------------------------------------------------------------------
+### Clase Cliente 
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>Cliente</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>nombre: String, documento: String, telefono: String</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Void (constructor)</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Crea una nueva instancia de Cliente con datos completos</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>public Cliente(String nombre, String documento, String telefono)</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>getNombre, getDocumento, getTelefono</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>String</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Permiten acceso controlado a los atributos privados de la clase</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>
+      public String getNombre()<br>
+      public String getDocumento()<br>
+      public String getTelefono()
+    </td>
+  </tr>
+</table>
+----------------------------------------------------------------------------------------------------------------------------
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>setNombre, setDocumento, setTelefono</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>valor: String</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>void</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Permiten modificar los atributos de forma controlada</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>
+      public void setNombre(String nombre)<br>
+      public void setDocumento(String documento)<br>
+      public void setTelefono(String telefono)
+    </td>
+  </tr>
+</table>
+--------------------------------------------------------------------------------------------------------- 
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>toString</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>String</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Proporciona representación textual del objeto para mostrar en UI</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>public String toString()</td>
+  </tr>
+</table>
+-----------------------------------------------------------------------------------------------------------------------------
+### Clase Transacción
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>Transaccion</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>
+      cliente: Cliente,<br>
+      tipo: String,<br>
+      montoOrigen: double,<br>
+      montoDestino: double,<br>
+      monedaOrigen: String,<br>
+      monedaDestino: String,<br>
+      tasaAplicada: double
+    </td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Void (constructor)</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Crea una nueva transacción con todos los datos requeridos</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>
+      public Transaccion(Cliente cliente, String tipo, double montoOrigen, double montoDestino, String monedaOrigen, String monedaDestino, double tasaAplicada)
+    </td>
+  </tr>
+</table>
+------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>
+      getCliente, getTipo, getMontoOrigen, getMontoDestino, getTasaAplicada,<br>
+      getMonedaOrigen, getMonedaDestino, getFecha
+    </td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>Tipo correspondiente al atributo</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Acceso controlado a todos los atributos de la transacción</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>
+      public Cliente getCliente()<br>
+      public String getTipo()<br>
+      public double getMontoOrigen()<br>
+      public double getMontoDestino()<br>
+      public double getTasaAplicada()<br>
+      public String getMonedaOrigen()<br>
+      public String getMonedaDestino()<br>
+      public String getFecha()
+    </td>
+  </tr>
+</table>
+-------------------------------------------------------------------------------------------------------------------------------------------
+<table border="1" cellspacing="0" cellpadding="6">
+  <tr>
+    <th>Nombre del Método</th>
+    <td>toString</td>
+  </tr>
+  <tr>
+    <th>Entrada (lista de Parámetros)</th>
+    <td>Ninguno</td>
+  </tr>
+  <tr>
+    <th>Resultado (tipo de dato de retorno)</th>
+    <td>String</td>
+  </tr>
+  <tr>
+    <th>Solución planteada</th>
+    <td>Representación legible de la transacción para reportes</td>
+  </tr>
+  <tr>
+    <th>Firma del Método</th>
+    <td>public String toString()</td>
+  </tr>
+</table>
+
+
 -----------------------------------------------------------------------------------------------------------------------------
 
 <table border="1" cellspacing="0" cellpadding="6">
